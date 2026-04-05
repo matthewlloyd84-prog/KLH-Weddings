@@ -14,12 +14,16 @@
       href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <link rel="icon" type="image/svg+xml" href="assets/brand-icon.svg" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header class="site-header">
       <div class="container nav-wrap">
-        <a class="brand" href="#home">KLH Weddings & Events</a>
+        <a class="brand" href="#home" aria-label="KLH Weddings & Events home">
+          <img src="assets/brand-icon.svg" alt="KLH Weddings & Events logo" class="brand-logo" />
+          <span class="brand-text">KLH Weddings & Events</span>
+        </a>
         <nav class="nav">
           <a href="#services">Services</a>
           <a href="#about">About</a>
@@ -297,7 +301,10 @@
 
     <footer class="site-footer">
       <div class="container footer-wrap">
-        <p>© <span id="year"></span> KLH Weddings & Events. All rights reserved.</p>
+        <div class="footer-brand">
+          <img src="assets/brand-icon.svg" alt="KLH Weddings & Events logo" class="footer-logo" />
+          <p>© <span id="year"></span> KLH Weddings & Events. All rights reserved.</p>
+        </div>
         <div class="footer-links">
           <a href="#services">Services</a>
           <a href="#about">About</a>
