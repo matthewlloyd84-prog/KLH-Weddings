@@ -40,6 +40,11 @@ h3 { font-size: clamp(1.6rem, 2.2vw, 2rem); }
   display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 1rem 0;
 }
 .brand { font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; font-size: 0.95rem; }
+.brand-logo { width: 180px; max-width: 48vw; height: auto; border-radius: 8px; }
+.brand-text { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.footer-brand { display: flex; align-items: center; gap: 0.9rem; }
+.footer-logo { width: 100px; height: auto; border-radius: 6px; }
+
 .nav { display: flex; gap: 1.5rem; font-size: 0.95rem; color: var(--muted); }
 .button {
   display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
@@ -115,6 +120,7 @@ h3 { font-size: clamp(1.6rem, 2.2vw, 2rem); }
 .contact-card { border-radius: var(--radius-xl); padding: 2rem; display: grid; gap: 1rem; }
 .contact-card label { display: grid; gap: 0.45rem; }
 .contact-card span { font-size: 0.92rem; font-weight: 600; color: var(--text); }
+.contact-card > div[data-netlify-recaptcha="true"] { margin-top: 0.25rem; }
 input, textarea {
   width: 100%; padding: 0.95rem 1rem; border-radius: 16px; border: 1px solid var(--line);
   font: inherit; background: white; color: var(--text);
@@ -123,6 +129,7 @@ textarea { min-height: 150px; resize: vertical; }
 .form-note { font-size: 0.84rem; margin: 0; }
 .site-footer { border-top: 1px solid var(--line); background: white; }
 .footer-links { display: flex; gap: 1rem; color: var(--muted); }
+.footer-brand p { margin: 0; }
 .hide-mobile { display: inline-flex; }
 @media (max-width: 1024px) {
   .hero-grid, .service-layout, .about-grid, .cta-grid, .contact-grid, .two-col-heading { grid-template-columns: 1fr; }

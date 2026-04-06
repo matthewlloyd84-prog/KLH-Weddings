@@ -14,12 +14,16 @@
       href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <link rel="icon" type="image/svg+xml" href="assets/brand-icon.svg" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header class="site-header">
       <div class="container nav-wrap">
-        <a class="brand" href="#home">KLH Weddings & Events</a>
+        <a class="brand" href="#home" aria-label="KLH Weddings & Events home">
+          <img src="assets/brand-icon.svg" alt="KLH Weddings & Events logo" class="brand-logo" />
+          <span class="brand-text">KLH Weddings & Events</span>
+        </a>
         <nav class="nav">
           <a href="#services">Services</a>
           <a href="#about">About</a>
@@ -265,13 +269,18 @@
               I’d love to hear about your plans and how I can support you. Get in touch to check availability and tell me more about your day.
             </p>
             <div class="contact-details">
-              <p><strong>Email:</strong> hello@klhweddingsandevents.co.uk</p>
+              <p><strong>Email:</strong> kirstyhawes01@gmail.com</p>
               <p><strong>Phone:</strong> 07XXX XXXXXX</p>
               <p><strong>Instagram:</strong> @klhweddingsandevents</p>
             </div>
           </div>
-          <form class="contact-card" name="enquiry-form" method="post" data-netlify="true">
+          <form class="contact-card" name="enquiry-form" method="post" data-netlify="true" data-netlify-recaptcha="true" netlify-honeypot="bot-field">
             <input type="hidden" name="form-name" value="enquiry-form" />
+            <p hidden>
+              <label>
+                Don’t fill this out if you’re human: <input name="bot-field" />
+              </label>
+            </p>
             <label>
               <span>Your name</span>
               <input type="text" name="name" placeholder="Your name" />
@@ -288,8 +297,9 @@
               <span>Tell me a little about your plans</span>
               <textarea name="message" placeholder="Tell me a little about your plans"></textarea>
             </label>
+            <div data-netlify-recaptcha="true"></div>
             <button class="button" type="submit">Send enquiry</button>
-            <p class="form-note">This form is set up so it can be connected quickly in Netlify or replaced with your website builder’s native form block.</p>
+            <p class="form-note">This form includes Netlify spam protection and reCAPTCHA. Set Netlify form notifications to kirstyhawes01@gmail.com in your site dashboard to receive enquiries.</p>
           </form>
         </div>
       </section>
@@ -297,7 +307,10 @@
 
     <footer class="site-footer">
       <div class="container footer-wrap">
-        <p>© <span id="year"></span> KLH Weddings & Events. All rights reserved.</p>
+        <div class="footer-brand">
+          <img src="assets/brand-icon.svg" alt="KLH Weddings & Events logo" class="footer-logo" />
+          <p>© <span id="year"></span> KLH Weddings & Events. All rights reserved.</p>
+        </div>
         <div class="footer-links">
           <a href="#services">Services</a>
           <a href="#about">About</a>
